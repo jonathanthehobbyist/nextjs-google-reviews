@@ -20,7 +20,7 @@ export default function GoogleReviews() {
 
         const fetchReviews = async () => {
             try {
-                const response = await fetch(`/api/google-reviews?place_id=${placeId}`);
+                const response = await fetch(`${window.location.origin}/api/fetch-all-reviews?place_id=${placeId}`);
                 const data = await response.json();
 
                 if (response.ok) {
